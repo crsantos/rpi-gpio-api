@@ -20,7 +20,7 @@ RUN mkdir -p /src && cp -a /tmp/node_modules /src/
 
 # Define working directory
 WORKDIR /src
-ADD . /src
+ADD ./src /src
 
 # Expose port
 EXPOSE  8080
