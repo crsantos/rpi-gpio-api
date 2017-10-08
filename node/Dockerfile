@@ -1,14 +1,14 @@
 # Set the base image
-FROM resin/rpi-raspbian:latest  
+FROM arm32v7/node:latest  
 
 # File Author / Maintainer
 MAINTAINER Carlos Santos
 
 # Install Node.js and other dependencies
-RUN apt-get update && \
-    apt-get -y install curl && \
-    curl -sL https://deb.nodesource.com/setup | sudo bash - && \
-    apt-get -y install python build-essential nodejs
+# RUN apt-get update && \
+#     apt-get -y install curl && \
+#     curl -sL https://deb.nodesource.com/setup | sudo bash - && \
+#     apt-get -y install python build-essential nodejs
 
 # Install nodemon
 RUN npm install -g nodemon
